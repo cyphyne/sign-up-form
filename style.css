@@ -1,0 +1,138 @@
+/*  ===========
+    STYLE RESET
+    =========== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+/*  ============= 
+    GLOBAL STYLES
+    ============= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+    min-height: 100dvh;
+    display: grid;
+    align-items: center;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Reset inherited and platform-specific native styling */
+input {
+  all: unset;
+  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+/*  ===========
+    MAIN STYLES
+    =========== */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 80vh;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1.5px solid rgba(118, 2, 2, 0.211);
+}
+
+.child-div {
+    flex: 1;
+}
+
+.background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: 
+        linear-gradient(rgba(255, 123, 0, 0.312), rgba(255, 47, 0, 0)),
+        url('images/sunset.jpg') fixed no-repeat center center/cover;
+    color: white;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #000000;
+    background: linear-gradient(
+        161deg, rgba(0, 0, 0, 1) 22%, 
+        rgba(0, 0, 0, 1) 67%, 
+        rgba(112, 3, 3, 1) 100%);
+    color: white;
+    padding: 20px;
+}
+
+.banner-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.form-container h2 {
+    align-self: center;
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin: 30px 0; 
+    padding: 0 10px;
+    width: 75%;
+}
+
+.form-card input {
+    margin: 5px 0;
+    padding: 8px;
+    box-shadow: none;
+    outline: none;
+    background: none;
+    border: 1.5px solid rgba(126, 104, 83, 0.555);
+    border-radius: 9px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-card input:focus {
+  border-color: #aa6600;
+  box-shadow: 0 0 0 3px rgba(105, 56, 0, 0.2); 
+}
+
+.signup-btn {
+    background: rgb(255, 145, 0);
+    border: none;
+    color: #fff;
+    min-width: 200px;
+    width: 75%;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.2s ease;
+    &:hover {
+        background: rgb(255, 106, 0);
+    }
+}

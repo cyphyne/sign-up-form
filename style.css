@@ -13,9 +13,7 @@
     GLOBAL STYLES
     ============= */
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
     background: black;
@@ -24,13 +22,14 @@ body {
     align-items: center;
 }
 
-h2 {
-    font-weight: 500;
-}
+h2 { font-weight: 500; }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: rgb(186, 112, 0);
+    &:hover {
+        color: rgb(255, 153, 0);
+    }
 }
 
 /* Reset inherited and platform-specific native styling */
@@ -42,7 +41,6 @@ input {
   appearance: none;
 }
 
-
 /*  ===========
     MAIN STYLES
     =========== */
@@ -51,26 +49,53 @@ input {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80vw;
-    height: 80vh;
+    width: 90vw;
+    height: 90vh;
     margin: 30px auto;
     overflow: hidden;
-    border-radius: 20px;
-    border: 1.5px solid rgba(118, 2, 2, 0.211);
-}
-
-.child-div {
-    flex: 1;
-}
-
-.background{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 40px;
+    border: 1.5px solid rgba(145, 52, 5, 0.538);
     background: 
         linear-gradient(rgba(255, 123, 0, 0.312), rgba(255, 47, 0, 0)),
         url('images/sunset.jpg') fixed no-repeat center center/cover;
-    color: white;
+}
+
+.child-div { flex: 1; }
+
+.background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 35px;
+}
+
+.banner-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: x-large;
+    color: rgb(255, 201, 162);
+}
+
+.logo {
+    display: flex;
+    width: 100%;
+}
+
+.logo-img {
+    margin-left: auto;
+    width: 20%;
+    height: auto;
+    opacity: 95%;
+}
+
+.tagline {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+    margin-top: auto;
+    margin-bottom: 20px;
+    color: rgb(209, 198, 170);
 }
 
 .form-container {
@@ -78,32 +103,38 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    background: #000000;
-    background: linear-gradient(
-        161deg, rgba(0, 0, 0, 1) 22%, 
-        rgba(0, 0, 0, 1) 67%, 
-        rgba(112, 3, 3, 1) 100%);
-    color: white;
+    gap: 5px;
+    overflow: hidden;
+    margin: 20px;
     padding: 20px;
-}
-
-.banner-title {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
+    color: rgb(246, 235, 214);
+    background-color: rgba(0, 0, 0, 0.93);
+    border-radius: 50px;
 }
 
 .form-container h2 {
-    align-self: center;
+    font-size: 30px;
+    font-weight: 200;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+.subheading {
+    color: #c8b798a3;
+    font-weight: 100;
+    letter-spacing: 1px;
 }
 
 .form-card {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    margin: 30px 0; 
-    padding: 0 10px;
-    width: 75%;
+    justify-content: center;
+    gap: 5px; 
+    margin: 25px 0; 
+    width: 65%;
+    font-weight: 200;
+    color: #c8b798;
+    overflow: hidden;
 }
 
 .form-card input {
@@ -112,27 +143,174 @@ input {
     box-shadow: none;
     outline: none;
     background: none;
-    border: 1.5px solid rgba(126, 104, 83, 0.555);
-    border-radius: 9px;
+    color: #fff8eb;
+    border: 1.5px solid rgba(158, 146, 123, 0.3);
+    border-radius: 15px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-card input:focus {
-  border-color: #aa6600;
-  box-shadow: 0 0 0 3px rgba(105, 56, 0, 0.2); 
+  border-color: #b87e00;
+  box-shadow: 0 0 0 3px rgba(167, 100, 0, 0.094); 
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.input-container div {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
 }
 
 .signup-btn {
-    background: rgb(255, 145, 0);
+    background: #ba4e00;
+    background: linear-gradient(
+        0deg,rgb(229, 96, 0) 0%,
+         rgba(222, 126, 0, 1) 100%);
     border: none;
-    color: #fff;
+    color: #ffdfb5;
     min-width: 200px;
-    width: 75%;
-    padding: 15px 20px;
-    border-radius: 12px;
+    width: 65%;
+    padding: 15px;
+    margin: 15px 0 20px 0;
+    border-radius: 20px;
     text-align: center;
+    font-size: 18px;
+    cursor: pointer;
     transition: 0.2s ease;
     &:hover {
-        background: rgb(255, 106, 0);
+        color: #fee5c3;
+        background: linear-gradient(
+            0deg,rgb(222, 92, 0) 0%,
+            rgb(255, 157, 0) 100%);
     }
+}
+
+h4 {
+   width: 60%; 
+   color: #756c5b;
+   text-align: center; 
+   font-weight: 100;
+   font-size: 15px;
+   border-bottom: .5px solid #484237; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+} 
+
+h4 span { 
+    background:#000000f6; 
+    padding:0 20px; 
+}
+
+.signup-group {
+    display: flex;
+    width: 60%; 
+    gap: 15px;
+}
+
+.logo-btn {
+    flex: 1;
+    border: 1px solid rgb(64, 55, 40);
+    background-color: black;
+    color: #d7b77f;
+    padding: 10px 35px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logo-btn:hover {
+    background-color: #fd9a19;
+}
+
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #bfa58e;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.logo-btn:hover .icon {
+    background-color: #ffffff;
+}
+
+.icon-one {
+    -webkit-mask-image: url('images/google.svg');
+    mask-image: url('images/google.svg');
+}
+
+.icon-two {
+    width: 25px;
+    height: 25px;
+    -webkit-mask-image: url('images/apple.svg');
+    mask-image: url('images/apple.svg');
+}
+
+.icon-three {
+    width: 25px;
+    height: 25px;
+    -webkit-mask-image: url('images/github.svg');
+    mask-image: url('images/github.svg');
+}
+
+
+.terms-agreement, .sign-in {
+    font-weight: 100;
+    color: #aa9c82;
+}
+
+.terms-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.terms-checkbox input[type="checkbox"] {
+  margin: 0;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #9f6500;
+  border-radius: 4px;
+  background-color: none;
+  display: inline-grid;
+  place-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.terms-checkbox input[type="checkbox"]:checked {
+  background-color: rgb(221, 125, 0);
+  border-color: rgb(221, 125, 0);
+}
+
+.terms-checkbox input[type="checkbox"]::before {
+  content: "";
+  width: 9px;
+  height: 5px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg) translateY(-1px);
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.terms-checkbox input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+
+.terms-checkbox input[type="checkbox"]:focus-visible {
+  outline: 2px solid #a3cef1;
+  outline-offset: 2px;
 }

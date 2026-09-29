@@ -153,6 +153,20 @@ input {
   box-shadow: 0 0 0 3px rgba(167, 100, 0, 0.094); 
 }
 
+.form-card.submitted input.invalid {
+    border: 1px solid #ff3c00;
+}
+
+.form-card.submitted input.invalid:focus {
+    border-color: #ff3c00;
+    box-shadow: 0 0 0 3px rgba(255, 60, 0, 0.1);
+}
+
+.error-message {
+    color: rgb(254, 64, 0);
+    font-size: 14px;
+}
+
 .input-container {
     display: flex;
     flex-direction: row;

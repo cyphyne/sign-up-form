@@ -21,52 +21,74 @@
             <h1 class="tagline"> Where innovation meets simplicity.</h1>
         </div>
         <!-- SIGN UP FORM -->
-        <div class="child-div form-container">
+        <div id="formContainer" class="child-div form-container">
             <h2>Create an account</h2>   
             <p class="subheading">Start your 30-day free trial</p>        
-            <div class="form-card">
+            <form id="formCard" class="form-card" novalidate>
                 <div class="input-container">
                     <div>
                         <label for="fname">First Name</label>
                         <input type="text" id="fname" name="fname" required>
+                        <span id="fnameError" class="error-message"></span>
                     </div>
                     <div>
                         <label for="lname">Last Name</label>
                         <input type="text" id="lname" name="lname" required>
+                        <span id="lnameError" class="error-message"></span>
                     </div>
                 </div>
+                <span id="nameError" class="error-message"></span>
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
+                <span id="emailError" class="error-message"></span>
                 <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="phone" name="phone" required>
+                <span id="phoneError" class="error-message"></span>
                 <div class="input-container">
                     <div>
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" required>
+                        <span id="passwordError" class="error-message"></span>
                     </div>
                     <div>
                         <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" id="confirmPassword" name="password" required>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <span id="confirmPasswordError" class="error-message"></span>
                     </div>
                 </div>
-            </div>
-            <label class="terms-checkbox">
-                <input type="checkbox" id="terms" name="terms_agreement" required>
+                <span id="passwordMatchError" class="error-message"></span>
+            </form>
+            <div class="terms-checkbox">
+                <input 
+                    type="checkbox" 
+                    id="terms" 
+                    name="terms_agreement" 
+                    required 
+                    form="formCard"
+                >
                 <label class="terms-agreement" for="terms">
                     I agree with the 
                     <a href="#">Terms and Conditions.</a>
                 </label>
-            </label>
-            <button class="signup-btn">Sign up</button>
+            </div>
+            <span id="agreeError" class="error-message"></span>
+            <button 
+                id="submitBtn" 
+                type="submit" 
+                class="signup-btn"
+                form="formCard"
+            >
+                Sign up
+            </button>
             <h4><span>or continue with</span></h4>
             <div class="signup-group">
-                <button class="logo-btn">
+                <button type="button" class="logo-btn">
                     <span class="icon icon-one"></span>
                 </button>
-                <button class="logo-btn">
+                <button type="button" class="logo-btn">
                     <span class="icon icon-two"></span>
                 </button>
-                <button class="logo-btn">
+                <button type="button" class="logo-btn">
                     <span class="icon icon-three"></span>
                 </button>
             </div>
